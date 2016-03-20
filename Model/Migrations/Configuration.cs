@@ -39,6 +39,19 @@ namespace Model.Migrations
                 Resolution = "640*320",
                 Size = "4inch"
             });
+
+            context.Phones.Add(new Phone
+            {
+                ID = Guid.NewGuid().ToString(),
+                Name = "Samsung S5",
+                Brand = "Samsung",
+                Camera = "2MP",
+                Cpu = "1GHz",
+                Memory = "512MB",
+                Price = 20.0,
+                Resolution = "640*320",
+                Size = "4inch"
+            });
         }
     }
 }
