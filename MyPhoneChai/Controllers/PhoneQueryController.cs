@@ -11,9 +11,22 @@ namespace MyPhoneChai.Controllers
 {
     public class PhoneQueryController : BaseController
     {
+        //public IHttpActionResult Get()
+        //{
+        //    PhoneService service = new PhoneService(Db);
+        //    var viewModels = service.GetAll();
+        //    return Ok(viewModels);
+        //}
+
+        PhoneService service;
+
+        public PhoneQueryController()
+        {
+            service = new PhoneService(Db);
+        }
+
         public IHttpActionResult Get()
         {
-            PhoneService service = new PhoneService(Db);
             var viewModels = service.GetAll();
             return Ok(viewModels);
         }
